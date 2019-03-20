@@ -40,38 +40,26 @@ import 'aos-animations/animations.min.js';
 3. Start using!
 
 
-## Animations we support:
+## Example usage:
 
-#### Text reveal from left to right.
+You will need to add the `data-aos` attribute to the element you want to animate and then specify the animation you would like to use. Our animations support all the configurations you can do with AOS such as changing delay, easing and duration (more [here](https://github.com/michalsnik/aos#2-set-animation-using-data-aos-attribute)).
 
-Usage:
+Example:
+
 
 ``` html
 
-<div data-aos="tr-lr">Your text</div>
+<div data-aos="tr-lr">Revealing text from left to right!</div>
 
 ```
 
 
+## Animations:
 
-#### Text reveal from bottom to top.
-
-Usage:
-
-``` html
-
-<div data-aos="tr-bt">Your text</div>
-
-```
+| Animation                      | `data-aos` |
+|--------------------------------|------------|
+| Text reveal from left to right | `tr-lr`    |
+| Text reveal from bottom to top | `tr-bt`    |
+| Text reveal from top to bottom | `tr-tb`    |
 
 
-
-#### Text reveal from top to bottom.
-
-Usage:
-
-``` html
-
-<div data-aos="tr-tb">Your text</div>
-
-```
