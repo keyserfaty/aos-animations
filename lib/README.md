@@ -61,5 +61,10 @@ Example:
 | Text reveal from left to right | `tr-lr`    |
 | Text reveal from bottom to top | `tr-bt`    |
 | Text reveal from top to bottom | `tr-tb`    |
+| Fade in | `fi`    |
+| Fade in up | `fi-u`    |
+| Fade in down | `fi-d`    |
+| Fade in left | `fi-l`    |
+| Fade in right | `fi-r`    |
 
 
