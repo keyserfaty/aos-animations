@@ -5,7 +5,7 @@ var gulp 	= require('gulp'),
   	concat 	= require('gulp-concat'),
   	uglify 	= require('gulp-uglify'),
     rename 	= require('gulp-rename'),
-    babel = require("gulp-babel"),
+    babel = require('gulp-babel'),
     minifyCSS = require('gulp-csso');
 
 const prefix = 'animations.min'
@@ -14,11 +14,11 @@ var paths = {
   lib: {
     css: {
       src: 'src/css/animations.scss',
-      dest: 'lib',
+      dest: 'lib/dist',
     },
     js: {
       src: 'src/js/animations.js',
-      dest: 'lib',
+      dest: 'lib/dist',
     }
   },
   styles: {
