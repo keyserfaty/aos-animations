@@ -1,0 +1,10 @@
+{
+  "name": "try",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "aos": "^3.0.0-beta.6",
+    "aos-animations": "^0.0.2"
+  }
+}
