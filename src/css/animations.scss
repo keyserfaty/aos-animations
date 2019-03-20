@@ -78,3 +78,69 @@
     top: 50px;
   }
 }
+
+// Fade in
+[data-aos="fi"] {
+  opacity: 0;
+  visibility: hidden;
+  animation-name: a-fade-in;
+  animation-duration: 0.95s;
+  animation-fill-mode: forwards;
+
+  &.aos-animate {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+// Fade in down
+[data-aos="fi-d"] {
+  opacity: 0;
+  transform: translateY(-100%);
+  visibility: hidden;
+
+  &.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+// Fade in up
+[data-aos="fi-u"] {
+  opacity: 0;
+  transform: translateY(100%);
+  visibility: hidden;
+
+  &.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+// Fade in left
+[data-aos="fi-l"] {
+  opacity: 0;
+  transform: translateX(-100%);
+  visibility: hidden;
+
+  &.aos-animate {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
+
+// Fade in right
+[data-aos="fi-r"] {
+  opacity: 0;
+  transform: translateX(100%);
+  visibility: hidden;
+
+  &.aos-animate {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
