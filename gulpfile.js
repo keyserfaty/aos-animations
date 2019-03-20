@@ -7,33 +7,51 @@ var gulp 	= require('gulp'),
     rename 	= require('gulp-rename'),
     minifyCSS = require('gulp-csso');
 
+const prefix = 'animations.min'
+
 var paths = {
   lib: {
-    src: 'src/animations.scss',
-    dest: 'lib',
+    css: {
+      src: 'src/css/animations.scss',
+      dest: 'lib',
+    },
+    js: {
+      src: 'src/js/animations.js',
+      dest: 'lib',
+    }
   },
   styles: {
-    src: 'src/*.scss',
+    src: 'src/css/*.scss',
     dest: 'dist'
   },
   scripts: {
-    src: 'src/*.js',
+    src: 'src/js/*.js',
     dest: 'dist'
   }
 };
 
-function lib () {
+function libStyles () {
   return gulp
-  .src(paths.lib.src, {
+  .src(paths.lib.css.src, {
     sourcemaps: true
   })
   .pipe(sass())
   .pipe(minifyCSS())
   .pipe(rename({
-	  basename: 'animate',
+	  basename: 'animations',
 	  suffix: '.min'
 	}))
-.pipe(gulp.dest(paths.lib.dest));
+.pipe(gulp.dest(paths.lib.css.dest));
+}
+
+function libScripts () {
+  return gulp
+	.src(paths.lib.js.src, {
+		sourcemaps: true
+	})
+	.pipe(uglify())
+	.pipe(concat(`${prefix}.js`))
+	.pipe(gulp.dest(paths.lib.js.dest));
 }
 
 function styles() {
@@ -64,7 +82,7 @@ function watch() {
 }
 
 var watch = gulp.parallel(styles, scripts, watch);
-var build = gulp.parallel(lib);
+var build = gulp.parallel(libStyles, libScripts);
 
 gulp
   .task(watch);
