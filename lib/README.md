@@ -19,11 +19,11 @@ Some nice animations to use with [AOS](https://github.com/michalsnik/aos).
 
 ``` html
 
-<link rel="stylesheet" href="node_modules/aos-animations/animations.min.css">
+<link rel="stylesheet" href="node_modules/aos-animations/dist/animations.min.css">
 
 ...
 
-<script src="node_modules/aos-animations/animations.min.js"></script>
+<script src="node_modules/aos-animations/dist/animations.min.js"></script>
 
 ```
 
@@ -32,8 +32,8 @@ or import to your js file:
 
 ``` js
 
-import 'aos-animations/animations.min.css';
-import 'aos-animations/animations.min.js';
+import 'aos-animations/dist/animations.min.css';
+import 'aos-animations/dist/animations.min.js';
 
 ```
 
