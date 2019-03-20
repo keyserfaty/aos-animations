@@ -10,7 +10,7 @@ var gulp 	= require('gulp'),
 var paths = {
   lib: {
     src: 'src/animations.scss',
-    dest: 'dist/lib',
+    dest: 'lib',
   },
   styles: {
     src: 'src/*.scss',
