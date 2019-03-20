@@ -5,6 +5,7 @@ var gulp 	= require('gulp'),
   	concat 	= require('gulp-concat'),
   	uglify 	= require('gulp-uglify'),
     rename 	= require('gulp-rename'),
+    babel = require("gulp-babel"),
     minifyCSS = require('gulp-csso');
 
 const prefix = 'animations.min'
@@ -48,7 +49,8 @@ function libScripts () {
   return gulp
 	.src(paths.lib.js.src, {
 		sourcemaps: true
-	})
+  })
+  .pipe(babel())
 	.pipe(uglify())
 	.pipe(concat(`${prefix}.js`))
 	.pipe(gulp.dest(paths.lib.js.dest));
@@ -68,7 +70,8 @@ function scripts() {
   return gulp
 	.src(paths.scripts.src, {
 		sourcemaps: true
-	})
+  })
+  .pipe(babel())
 	.pipe(uglify())
 	.pipe(concat('scripts.js'))
 	.pipe(gulp.dest(paths.scripts.dest));
