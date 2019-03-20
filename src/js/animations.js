@@ -1,7 +1,5 @@
-const d = document;
-
 const addWrapper = (elem, className) => {
-  const wrapperNode = d.createElement('div');
+  const wrapperNode = document.createElement('div');
   wrapperNode.classList.add(className);
 
   const nodeCopy = elem.cloneNode(true);
@@ -14,23 +12,20 @@ const addWrapper = (elem, className) => {
 
 const init = () => {
   /** Constants */
-  const anim = {
-    text: {
-      leftRight: 'tr-lr',
-      topBottom: 'tr-tb',
-      topBottom2: 'tr-tb2',
-      bottomTop: 'tr-bt',
-    },
-  };
+  const d = document;
+  const elems = ['tr-tb', 'tr-tb2', 'tr-bt'];
 
-  /** DOM Nodes */
-  const bottomTop = d.querySelector(`[data-aos="${anim.text.bottomTop}"]`);
-  const topBottom = d.querySelector(`[data-aos="${anim.text.topBottom}"]`);
-  const topBottom2 = d.querySelector(`[data-aos="${anim.text.topBottom2}"]`);
+  /** Nodes */
+  const nodes = d.querySelectorAll(`[data-aos]`);
 
-  addWrapper(bottomTop, 'wrapper-bt');
-  addWrapper(topBottom, 'wrapper-tb');
-  addWrapper(topBottom2, 'wrapper-tb2');
+  /** Adding wrappers to elements */
+  nodes.forEach(node => {
+    const dataAttr = node.getAttribute('data-aos');
+
+    if (elems.includes(dataAttr)) {
+      addWrapper(node, `wrapper-${dataAttr}`);
+    }
+  });
 };
 
 document.addEventListener("DOMContentLoaded", init);
