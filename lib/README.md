@@ -54,6 +54,21 @@ Example:
 ```
 
 
+#### Example with some tweekings:
+
+``` html
+
+<div 
+  data-aos="tr-lr"
+  data-aos-offset="200"
+  data-aos-delay="50"
+  data-aos-duration="1000"
+  data-aos-easing="ease-in-out"
+>Revealing text from left to right!</div>
+
+```
+
+
 ## Animations:
 
 | Animation                      | `data-aos` |
