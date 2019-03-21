@@ -1,6 +1,11 @@
 # AOS-Animations 🦄
 
 
+![license](https://img.shields.io/npm/l/aos-animations.svg?style=flat-square)
+![last commit](https://img.shields.io/github/last-commit/keyserfaty/aos-animations.svg?style=flat-square)
+![version](https://img.shields.io/npm/v/aos-animations.svg?style=flat-square)
+
+
 Some nice animations to use with [AOS](https://github.com/michalsnik/aos).
 
 
