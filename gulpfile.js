@@ -11,6 +11,10 @@ var gulp 	= require('gulp'),
 const prefix = 'animations.min'
 
 var paths = {
+  readme: {
+    src: './README.md',
+    dest: 'lib',
+  },
   lib: {
     css: {
       src: 'src/css/animations.scss',
@@ -23,11 +27,11 @@ var paths = {
   },
   styles: {
     src: 'src/css/*.scss',
-    dest: 'dist'
+    dest: 'dist',
   },
   scripts: {
     src: 'src/js/*.js',
-    dest: 'dist'
+    dest: 'dist',
   }
 };
 
@@ -84,8 +88,14 @@ function watch() {
   	.watch(paths.styles.src, styles);
 }
 
+function copyReadme () {
+  gulp
+    .src(paths.readme.src)
+    .pipe(gulp.dest(paths.readme.dest));
+}
+
 var watch = gulp.parallel(styles, scripts, watch);
-var build = gulp.parallel(libStyles, libScripts);
+var build = gulp.parallel(copyReadme, libStyles, libScripts);
 
 gulp
   .task(watch);

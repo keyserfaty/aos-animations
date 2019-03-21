@@ -1,11 +1,12 @@
 {
-  "name": "mt-animate",
-  "version": "1.0.0",
+  "name": "aos-animations",
+  "version": "0.0.7",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "watch": "gulp watch",
-    "build": "gulp build"
+    "build": "gulp build",
+    "post": "cd lib && yarn publish"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
